@@ -65,9 +65,9 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   };
 
   return (
-    <div className="group relative bg-[#FAF6F0] rounded-3xl overflow-hidden border border-gray-200/60 hover:shadow-lg transition-all duration-300 flex flex-col h-full">
+    <div className="group relative bg-slate-900/60 backdrop-blur-md rounded-3xl overflow-hidden border border-white/10 hover:border-purple-500/35 hover:shadow-[0_0_20px_rgba(168,85,247,0.15)] transition-all duration-300 flex flex-col h-full">
       {/* Image and Badges */}
-      <Link href={`/product/${product.slug}`} className="block relative aspect-[4/5] bg-brand-pink/30 overflow-hidden">
+      <Link href={`/product/${product.slug}`} className="block relative aspect-[4/5] bg-purple-950/20 overflow-hidden">
         <Image
           src={product.thumbnail || '/placeholder-dress.jpg'}
           alt={product.name}
@@ -82,8 +82,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           onClick={handleWishlistToggle}
           className={`absolute top-4 right-4 z-10 w-9 h-9 rounded-full flex items-center justify-center shadow-md border transition-all duration-300 hover:scale-110 ${
             favorite
-              ? 'bg-[#E88C7D] border-[#E88C7D] text-[#FAF6F0]'
-              : 'bg-white/80 backdrop-blur-sm border-gray-200 text-[#1E2530] hover:bg-white'
+              ? 'bg-[#a855f7] border-[#a855f7] text-white shadow-[0_0_10px_rgba(168,85,247,0.4)]'
+              : 'bg-slate-950/80 backdrop-blur-sm border-white/10 text-white hover:bg-slate-900'
           }`}
         >
           <Heart className="w-4.5 h-4.5" fill={favorite ? "currentColor" : "none"} />
@@ -97,12 +97,12 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             </span>
           )}
           {product.isBestSeller && (
-            <span className="bg-indigo-600 text-white text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded-full">
+            <span className="bg-indigo-650 text-white text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded-full">
               Best
             </span>
           )}
           {hasDiscount && (
-            <span className="bg-[#E88C7D] text-white text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded-full">
+            <span className="bg-[#a855f7] text-white text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded-full">
               -{product.discountPercentage || Math.round(((originalPrice - displayPrice) / originalPrice) * 100)}%
             </span>
           )}
@@ -110,8 +110,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 
         {/* Stock warning */}
         {product.stock <= 0 && (
-          <div className="absolute inset-0 bg-[#FAF6F0]/70 backdrop-blur-xs flex items-center justify-center">
-            <span className="bg-[#1E2530] text-white text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wider">
+          <div className="absolute inset-0 bg-slate-950/70 backdrop-blur-xs flex items-center justify-center">
+            <span className="bg-[#a855f7] text-white text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wider">
               Out of Stock
             </span>
           </div>
@@ -119,39 +119,41 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       </Link>
 
       {/* Info */}
-      <div className="p-5 flex-1 flex flex-col">
-        {/* Rating */}
-        <div className="flex items-center gap-1 mb-2">
-          <div className="flex text-amber-505">
-            <Star className="w-3.5 h-3.5 fill-current text-amber-450" />
-            <Star className="w-3.5 h-3.5 fill-current text-amber-450" />
-            <Star className="w-3.5 h-3.5 fill-current text-amber-450" />
-            <Star className="w-3.5 h-3.5 fill-current text-amber-450" />
-            <Star className="w-3.5 h-3.5 fill-current text-amber-450" />
+      <div className="p-5 flex-1 flex flex-col justify-between">
+        <div>
+          {/* Rating */}
+          <div className="flex items-center gap-1 mb-2">
+            <div className="flex text-amber-400">
+              <Star className="w-3.5 h-3.5 fill-current" />
+              <Star className="w-3.5 h-3.5 fill-current" />
+              <Star className="w-3.5 h-3.5 fill-current" />
+              <Star className="w-3.5 h-3.5 fill-current" />
+              <Star className="w-3.5 h-3.5 fill-current" />
+            </div>
+            <span className="text-[11px] text-slate-400 font-semibold">(5.0)</span>
           </div>
-          <span className="text-[11px] text-[#1E2530]/60 font-semibold">(5.0)</span>
-        </div>
 
-        {/* Title */}
-        <Link href={`/product/${product.slug}`} className="block flex-1">
-          <h3 className="font-playfair text-base font-bold text-[#1E2530] group-hover:text-[#E88C7D] transition-colors line-clamp-2 leading-snug">
-            {product.name}
-          </h3>
-        </Link>
+          {/* Title */}
+          <Link href={`/product/${product.slug}`} className="block">
+            <h3 className="font-playfair text-base font-bold text-white group-hover:text-[#a855f7] transition-colors line-clamp-2 leading-snug">
+              {product.name}
+            </h3>
+          </Link>
+        </div>
 
         {/* Price & Action */}
         <div className="flex items-center justify-between mt-4">
           <div className="flex items-baseline gap-2">
-            <span className="text-lg font-extrabold text-[#1E2530]">৳{displayPrice}</span>
+            <span className="text-lg font-extrabold text-white">৳{displayPrice}</span>
             {hasDiscount && (
-              <span className="text-sm text-gray-400 line-through">৳{originalPrice}</span>
+              <span className="text-sm text-slate-500 line-through">৳{originalPrice}</span>
             )}
           </div>
 
           {product.stock > 0 && (
             <button
               onClick={handleQuickAdd}
-              className="bg-[#FAF0EE] text-[#E88C7D] hover:bg-[#E88C7D] hover:text-white w-9 h-9 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-105 shadow-sm"
+              className="bg-purple-950/60 text-[#a855f7] hover:bg-[#a855f7] hover:text-white w-9 h-9 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-105 shadow-sm border border-purple-500/20"
               title="Quick Add to Cart"
             >
               <ShoppingCart className="w-4 h-4" />

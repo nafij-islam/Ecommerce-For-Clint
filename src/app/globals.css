@@ -1,22 +1,22 @@
 @import "tailwindcss";
 
 :root {
-  --background: #FAF6F0;
-  --foreground: #1E2530;
-  --accent: #E88C7D;
-  --accent-hover: #D77A6C;
-  --pastel-pink: #FAF0EE;
-  --pastel-peach: #FAF0E6;
+  --background: #05060c;
+  --foreground: #f8fafc;
+  --accent: #a855f7;
+  --accent-hover: #c084fc;
+  --pastel-pink: #1e112a;
+  --pastel-peach: #25132d;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-brand-coral: #E88C7D;
-  --color-brand-coral-hover: #D77A6C;
-  --color-brand-peach: #FAF0E6;
-  --color-brand-pink: #FAF0EE;
-  --color-brand-navy: #1E2530;
+  --color-brand-coral: #a855f7;
+  --color-brand-coral-hover: #c084fc;
+  --color-brand-peach: #25132d;
+  --color-brand-pink: #1e112a;
+  --color-brand-navy: #05060c;
   --font-sans: 'Outfit', var(--font-geist-sans), sans-serif;
 }
 
@@ -28,7 +28,7 @@
   }
 }
 
-/* Cosmic Galaxy Theme Styles for Admin Console */
+/* Cosmic Galaxy Theme Styles for Admin Console and Full Site */
 .bg-galaxy {
   background: radial-gradient(circle at 10% 20%, rgba(9, 10, 26, 1) 0%, rgba(4, 5, 12, 1) 90%);
   position: relative;
@@ -124,12 +124,12 @@
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #FAF6F0;
+  background: #090a1a;
 }
 ::-webkit-scrollbar-thumb {
-  background: #E1DCD6;
+  background: #251e3a;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #CFCABF;
+  background: #3c2a5c;
 }
