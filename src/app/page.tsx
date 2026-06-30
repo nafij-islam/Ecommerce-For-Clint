@@ -122,15 +122,15 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative overflow-hidden py-12 md:py-16 bg-[#FAF9F5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-[48px] overflow-hidden shadow-md border border-gray-100 relative h-[580px] sm:h-[550px] lg:h-[500px] group">
+          <div className="bg-white rounded-[48px] overflow-hidden shadow-md border border-gray-100 relative h-auto lg:h-[500px] group">
             
             {activeHeroBanners.map((slide, idx) => (
               <div
                 key={idx}
-                className={`flex flex-col lg:grid lg:grid-cols-12 h-full w-full absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+                className={`flex flex-col lg:grid lg:grid-cols-12 w-full lg:absolute lg:inset-0 transition-opacity duration-1050 ease-in-out ${
                   idx === currentHeroIndex 
-                    ? 'opacity-100 z-10 pointer-events-auto' 
-                    : 'opacity-0 z-0 pointer-events-none'
+                    ? 'flex opacity-100 z-10 pointer-events-auto relative' 
+                    : 'hidden lg:grid opacity-0 z-0 pointer-events-none'
                 }`}
               >
                 {/* Left Column (Content) */}
@@ -145,21 +145,21 @@ export default function HomePage() {
                     </h1>
                   </div>
                   
-                  <p className="text-[#333333]/85 font-light text-xs sm:text-base lg:text-lg leading-relaxed max-w-xl line-clamp-2 lg:line-clamp-none">
+                  <p className="text-[#333333]/85 font-light text-xs sm:text-base lg:text-lg leading-relaxed max-w-xl">
                     {slide.subtitle}
                   </p>
                   
                   <div className="flex flex-wrap gap-3 sm:gap-4">
                     <Link
                       href={slide.ctaLink || '/shop'}
-                      className="inline-flex items-center justify-center bg-[#4A148C] hover:bg-[#5C2C7A] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-xs sm:text-sm font-bold shadow-md transition-all duration-300 hover:scale-105"
+                      className="inline-flex items-center justify-center bg-[#4A148C] hover:bg-[#5C2C7A] text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-full text-xs sm:text-sm font-bold shadow-md transition-all duration-300 hover:scale-105"
                     >
                       <span>{slide.ctaText || 'Shop Now'}</span>
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Link>
                     <Link
                       href="/shop?isNewArrival=true"
-                      className="inline-flex items-center justify-center bg-white border border-gray-200 hover:bg-gray-50 text-[#2C3E50] px-6 sm:px-8 py-3 sm:py-4 rounded-full text-xs sm:text-sm font-bold transition-all duration-300 hover:scale-105"
+                      className="inline-flex items-center justify-center bg-white border border-gray-200 hover:bg-gray-50 text-[#2C3E50] px-6 sm:px-8 py-3.5 sm:py-4 rounded-full text-xs sm:text-sm font-bold transition-all duration-300 hover:scale-105"
                     >
                       View Collection
                     </Link>
@@ -167,7 +167,7 @@ export default function HomePage() {
                 </div>
 
                 {/* Right Column (Image) */}
-                <div className="w-full h-56 sm:h-64 lg:h-full lg:col-span-5 relative overflow-hidden order-first lg:order-last z-10">
+                <div className="w-full h-56 sm:h-72 lg:h-full lg:col-span-5 relative overflow-hidden order-first lg:order-last z-10">
                   <Image
                     src={slide.imageUrl}
                     alt="Model Dress"
