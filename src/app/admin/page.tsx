@@ -757,7 +757,7 @@ export default function AdminConsole() {
                   onClick={() => setActiveSection(item.key as any)}
                   className={`w-full flex items-center gap-3 px-5 py-3 rounded-2xl transition-all duration-300 ${
                     isActive
-                      ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-[0_0_15px_rgba(168,85,247,0.4)] border border-purple-400/30'
+                      ? 'bg-purple-700/80 text-white shadow-[0_0_15px_rgba(168,85,247,0.4)] border border-purple-500/50'
                       : 'text-slate-400 hover:text-white hover:bg-white/5 border border-transparent'
                   }`}
                 >
@@ -772,7 +772,7 @@ export default function AdminConsole() {
         {/* Sidebar Footer */}
         <div className="p-6 border-t border-white/10 text-xs text-slate-400 space-y-4">
           <div className="flex items-center gap-3 bg-slate-900/40 p-3 rounded-2xl border border-white/5">
-            <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-purple-500 to-pink-500 flex items-center justify-center font-bold text-white shadow-sm">
+            <div className="w-8 h-8 rounded-full bg-purple-800 flex items-center justify-center font-bold text-white shadow-sm">
               {user.name.charAt(0)}
             </div>
             <div>
@@ -821,7 +821,7 @@ export default function AdminConsole() {
                       }}
                       className={`w-full flex items-center gap-3.5 px-4.5 py-3.5 rounded-2xl transition-all ${
                         isActive
-                          ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg border border-purple-400/25'
+                          ? 'bg-purple-700/80 text-white shadow-lg border border-purple-500/30'
                           : 'text-slate-400 hover:text-white hover:bg-white/5 border border-transparent'
                       }`}
                     >
@@ -835,7 +835,7 @@ export default function AdminConsole() {
 
             <div className="border-t border-white/10 pt-6 space-y-4">
               <div className="flex items-center gap-3 bg-slate-900/60 p-3 rounded-2xl border border-white/5">
-                <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-purple-500 to-pink-500 flex items-center justify-center font-bold text-white">
+                <div className="w-8 h-8 rounded-full bg-purple-800 flex items-center justify-center font-bold text-white">
                   {user.name.charAt(0)}
                 </div>
                 <div>
@@ -885,7 +885,7 @@ export default function AdminConsole() {
           <div className="flex items-center gap-6">
             <Link
               href="/"
-              className="text-xs text-purple-400 border border-purple-500/30 px-5 py-2.5 rounded-full font-semibold hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 hover:text-white hover:border-transparent transition-all duration-300 hover:scale-105 shadow-[0_0_15px_rgba(168,85,247,0.1)] hover:shadow-[0_0_20px_rgba(168,85,247,0.3)] bg-slate-955/40"
+              className="text-xs text-purple-400 border border-purple-500/30 px-5 py-2.5 rounded-full font-semibold hover:bg-purple-800 hover:text-white hover:border-transparent transition-all duration-300 hover:scale-105 shadow-[0_0_15px_rgba(168,85,247,0.1)] hover:shadow-[0_0_20px_rgba(168,85,247,0.3)] bg-slate-955/40"
             >
               &larr; View Live Website
             </Link>
@@ -936,19 +936,19 @@ export default function AdminConsole() {
                     </div>
                   </div>
                   {/* Card 2 */}
-                  <div className="bg-slate-900/40 backdrop-blur-md p-6 rounded-3xl border border-white/10 hover:border-pink-500/30 shadow-[0_0_15px_rgba(236,72,153,0.05)] hover:shadow-[0_0_20px_rgba(236,72,153,0.15)] flex items-center gap-5 hover:-translate-y-0.5 transition-all duration-300">
-                    <div className="bg-pink-955/60 border border-pink-500/20 p-4 rounded-2xl text-pink-400 shadow-inner">
+                  <div className="bg-slate-900/40 backdrop-blur-md p-6 rounded-3xl border border-white/10 hover:border-purple-500/30 shadow-[0_0_15px_rgba(168,85,247,0.05)] hover:shadow-[0_0_20px_rgba(168,85,247,0.15)] flex items-center gap-5 hover:-translate-y-0.5 transition-all duration-300">
+                    <div className="bg-purple-950/60 border border-purple-500/20 p-4 rounded-2xl text-purple-400 shadow-inner">
                       <ShoppingBag className="w-6 h-6" />
                     </div>
                     <div>
                       <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Total Orders</p>
                       <h3 className="text-2xl font-extrabold text-white mt-0.5 glow-text">{stats.totalOrders}</h3>
-                      <span className="text-[10px] text-pink-400 font-semibold block mt-0.5">{stats.pendingOrders} pending queue</span>
+                      <span className="text-[10px] text-purple-400 font-semibold block mt-0.5">{stats.pendingOrders} pending queue</span>
                     </div>
                   </div>
                   {/* Card 3 */}
-                  <div className="bg-slate-900/40 backdrop-blur-md p-6 rounded-3xl border border-white/10 hover:border-blue-500/30 shadow-[0_0_15px_rgba(59,130,246,0.05)] hover:shadow-[0_0_20px_rgba(59,130,246,0.15)] flex items-center gap-5 hover:-translate-y-0.5 transition-all duration-300">
-                    <div className="bg-blue-955/60 border border-blue-500/20 p-4 rounded-2xl text-blue-400 shadow-inner">
+                  <div className="bg-slate-900/40 backdrop-blur-md p-6 rounded-3xl border border-white/10 hover:border-purple-500/30 shadow-[0_0_15px_rgba(168,85,247,0.05)] hover:shadow-[0_0_20px_rgba(168,85,247,0.15)] flex items-center gap-5 hover:-translate-y-0.5 transition-all duration-300">
+                    <div className="bg-purple-955/60 border border-purple-500/20 p-4 rounded-2xl text-purple-400 shadow-inner">
                       <Shirt className="w-6 h-6" />
                     </div>
                     <div>
@@ -1075,7 +1075,7 @@ export default function AdminConsole() {
                     setProdVariants([]);
                     setActiveModal('add_product');
                   }}
-                  className="w-full sm:w-auto bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white px-5 py-2.5 rounded-full text-xs font-semibold flex items-center justify-center gap-1.5 shadow-md shadow-purple-500/10 border border-purple-400/20"
+                  className="w-full sm:w-auto bg-purple-700 hover:bg-purple-800 text-white px-5 py-2.5 rounded-full text-xs font-semibold flex items-center justify-center gap-1.5 shadow-md shadow-purple-900/20 border border-purple-500/30"
                 >
                   <Plus className="w-3.5 h-3.5" />
                   <span>Add Product</span>
@@ -1171,7 +1171,7 @@ export default function AdminConsole() {
                     setCatDesc('');
                     setActiveModal('add_category');
                   }}
-                  className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white px-5 py-2.5 rounded-full text-xs font-semibold flex items-center gap-1.5 shadow-md border border-purple-400/20"
+                  className="bg-purple-700 hover:bg-purple-800 text-white px-5 py-2.5 rounded-full text-xs font-semibold flex items-center gap-1.5 shadow-md border border-purple-500/30"
                 >
                   <Plus className="w-3.5 h-3.5" />
                   <span>Add Category</span>
@@ -1408,7 +1408,7 @@ export default function AdminConsole() {
                     setCpEnd('');
                     setActiveModal('add_coupon');
                   }}
-                  className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white px-5 py-2.5 rounded-full text-xs font-semibold flex items-center gap-1.5 shadow-md border border-purple-400/20"
+                  className="bg-purple-700 hover:bg-purple-800 text-white px-5 py-2.5 rounded-full text-xs font-semibold flex items-center gap-1.5 shadow-md border border-purple-500/30"
                 >
                   <Plus className="w-3.5 h-3.5" />
                   <span>Create Coupon</span>
@@ -1570,7 +1570,7 @@ export default function AdminConsole() {
                     setBnCtaLink('');
                     setActiveModal('add_banner');
                   }}
-                  className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white px-5 py-2.5 rounded-full text-xs font-semibold flex items-center gap-1.5 shadow-md border border-purple-400/20"
+                  className="bg-purple-700 hover:bg-purple-800 text-white px-5 py-2.5 rounded-full text-xs font-semibold flex items-center gap-1.5 shadow-md border border-purple-500/30"
                 >
                   <Plus className="w-3.5 h-3.5" />
                   <span>Create Banner</span>
@@ -1692,7 +1692,7 @@ export default function AdminConsole() {
 
                   <button
                     type="submit"
-                    className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white px-6 py-2.5 rounded-full text-xs font-semibold shadow-md border border-purple-400/20"
+                    className="bg-purple-700 hover:bg-purple-800 text-white px-6 py-2.5 rounded-full text-xs font-semibold shadow-md border border-purple-500/30"
                   >
                     Save Changes
                   </button>
@@ -1988,7 +1988,7 @@ export default function AdminConsole() {
               <button type="button" onClick={() => setActiveModal('none')} className="w-full border border-white/10 py-2.5 rounded-full text-xs font-bold text-slate-404 hover:text-white uppercase bg-slate-900">
                 Cancel
               </button>
-              <button type="submit" className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-2.5 rounded-full text-xs font-bold uppercase">
+              <button type="submit" className="w-full bg-purple-700 hover:bg-purple-800 text-white py-2.5 rounded-full text-xs font-bold uppercase">
                 Save Edits
               </button>
             </div>
@@ -2036,7 +2036,7 @@ export default function AdminConsole() {
               <button type="button" onClick={() => setActiveModal('none')} className="w-full border border-white/10 py-2.5 rounded-full text-xs font-bold text-slate-404 hover:text-white uppercase bg-slate-900">
                 Cancel
               </button>
-              <button type="submit" className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-2.5 rounded-full text-xs font-bold uppercase">
+              <button type="submit" className="w-full bg-purple-700 hover:bg-purple-800 text-white py-2.5 rounded-full text-xs font-bold uppercase">
                 Save Category
               </button>
             </div>
@@ -2118,7 +2118,7 @@ export default function AdminConsole() {
               <button type="button" onClick={() => setActiveModal('none')} className="w-full border border-white/10 py-2.5 rounded-full text-xs font-bold text-slate-404 hover:text-white uppercase bg-slate-900">
                 Close
               </button>
-              <button type="submit" className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-2.5 rounded-full text-xs font-bold uppercase">
+              <button type="submit" className="w-full bg-purple-700 hover:bg-purple-800 text-white py-2.5 rounded-full text-xs font-bold uppercase">
                 Save Updates
               </button>
             </div>
@@ -2170,7 +2170,7 @@ export default function AdminConsole() {
               <button type="button" onClick={() => setActiveModal('none')} className="w-full border border-white/10 py-2.5 rounded-full text-xs font-bold text-slate-404 hover:text-white uppercase bg-slate-900">
                 Cancel
               </button>
-              <button type="submit" className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-2.5 rounded-full text-xs font-bold uppercase">
+              <button type="submit" className="w-full bg-purple-700 hover:bg-purple-800 text-white py-2.5 rounded-full text-xs font-bold uppercase">
                 Save Coupon
               </button>
             </div>
@@ -2227,7 +2227,7 @@ export default function AdminConsole() {
               <button type="button" onClick={() => setActiveModal('none')} className="w-full border border-white/10 py-2.5 rounded-full text-xs font-bold text-slate-404 hover:text-white uppercase bg-slate-900">
                 Cancel
               </button>
-              <button type="submit" className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-2.5 rounded-full text-xs font-bold uppercase">
+              <button type="submit" className="w-full bg-purple-700 hover:bg-purple-800 text-white py-2.5 rounded-full text-xs font-bold uppercase">
                 Publish Banner
               </button>
             </div>

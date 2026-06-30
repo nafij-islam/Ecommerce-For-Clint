@@ -52,8 +52,8 @@
   width: 140%;
   height: 140%;
   background: radial-gradient(circle at 20% 30%, rgba(168, 85, 247, 0.1) 0%, transparent 40%),
-              radial-gradient(circle at 80% 70%, rgba(236, 72, 153, 0.08) 0%, transparent 45%),
-              radial-gradient(circle at 50% 10%, rgba(59, 130, 246, 0.08) 0%, transparent 35%);
+              radial-gradient(circle at 80% 70%, rgba(147, 51, 234, 0.08) 0%, transparent 45%),
+              radial-gradient(circle at 50% 10%, rgba(107, 33, 168, 0.08) 0%, transparent 35%);
   pointer-events: none;
   z-index: 0;
 }
@@ -83,11 +83,6 @@
   box-shadow: 0 0 15px rgba(168, 85, 247, 0.15), inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
 }
 
-.galaxy-border-pink {
-  border: 1px solid rgba(236, 72, 153, 0.25);
-  box-shadow: 0 0 15px rgba(236, 72, 153, 0.15);
-}
-
 .glow-btn {
   position: relative;
   transition: all 0.3s ease;
@@ -97,7 +92,7 @@
   content: "";
   position: absolute;
   inset: -2px;
-  background: linear-gradient(45deg, #a855f7, #ec4899, #3b82f6);
+  background: linear-gradient(45deg, #a855f7, #701a75, #6b21a8);
   border-radius: inherit;
   z-index: -1;
   opacity: 0;
