@@ -49,9 +49,9 @@ export const Header: React.FC = () => {
   };
 
   return (
-    <header className="sticky top-0 z-40 w-full bg-background/95 backdrop-blur-md border-b border-gray-100">
+    <header className="sticky top-0 z-40 w-full bg-[#FAF6F0]/95 backdrop-blur-md border-b border-gray-200/50">
       {/* Announcement Bar */}
-      <div className="bg-brand-coral py-2 text-center text-xs font-semibold tracking-wider text-white">
+      <div className="bg-[#E1E0E6] py-2 text-center text-xs font-bold tracking-wider text-[#FAF6F0]">
         {announcement}
       </div>
 
@@ -70,7 +70,7 @@ export const Header: React.FC = () => {
                 }}
               />
             ) : null}
-            <span className="font-playfair text-xl font-bold tracking-tight text-brand-navy group-hover:text-brand-coral transition-colors duration-300">
+            <span className="font-playfair text-xl font-bold tracking-tight text-[#1E2530] group-hover:text-[#E88C7D] transition-colors duration-300">
               {storeName}
             </span>
           </Link>
@@ -82,46 +82,46 @@ export const Header: React.FC = () => {
               placeholder="Search beautiful dresses..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-4 pr-10 py-2 rounded-full border border-gray-200 text-sm focus:outline-none focus:ring-1 focus:ring-brand-coral focus:border-brand-coral bg-gray-50/50"
+              className="w-full pl-4 pr-10 py-2 rounded-full border border-gray-300/60 text-sm focus:outline-none focus:ring-1 focus:ring-[#E88C7D] focus:border-[#E88C7D] bg-white"
             />
-            <button type="submit" className="absolute right-3 top-2.5 text-gray-400 hover:text-brand-coral">
+            <button type="submit" className="absolute right-3 top-2.5 text-gray-400 hover:text-[#E88C7D]">
               <Search className="w-4 h-4" />
             </button>
           </form>
 
           {/* Navigation links - Desktop */}
-          <nav className="hidden lg:flex items-center gap-8 text-sm font-medium tracking-wide">
-            <Link href="/" className="hover:text-brand-coral transition-colors">Home</Link>
-            <Link href="/shop" className="hover:text-brand-coral transition-colors">Shop</Link>
-            <Link href="/shop?isNewArrival=true" className="hover:text-brand-coral transition-colors">New Arrivals</Link>
-            <Link href="/shop?isBestSeller=true" className="hover:text-brand-coral transition-colors">Best Sellers</Link>
-            <Link href="/shop?isOnSale=true" className="text-rose-500 hover:text-brand-coral transition-colors font-semibold">Sale</Link>
-            <Link href="/about" className="hover:text-brand-coral transition-colors">About</Link>
-            <Link href="/contact" className="hover:text-brand-coral transition-colors">Contact</Link>
+          <nav className="hidden lg:flex items-center gap-8 text-sm font-semibold tracking-wide">
+            <Link href="/" className="text-[#1E2530] hover:text-[#E88C7D] transition-colors">Home</Link>
+            <Link href="/shop" className="text-[#1E2530] hover:text-[#E88C7D] transition-colors">Shop</Link>
+            <Link href="/shop?isNewArrival=true" className="text-[#1E2530] hover:text-[#E88C7D] transition-colors">New Arrivals</Link>
+            <Link href="/shop?isBestSeller=true" className="text-[#1E2530] hover:text-[#E88C7D] transition-colors">Best Sellers</Link>
+            <Link href="/shop?isOnSale=true" className="text-rose-550 hover:text-[#E88C7D] transition-colors font-bold">Sale</Link>
+            <Link href="/about" className="text-[#1E2530] hover:text-[#E88C7D] transition-colors">About</Link>
+            <Link href="/contact" className="text-[#1E2530] hover:text-[#E88C7D] transition-colors">Contact</Link>
           </nav>
 
           {/* User icons */}
           <div className="flex items-center gap-4">
             {/* Search toggler for mobile */}
-            <Link href="/shop" className="md:hidden text-brand-navy hover:text-brand-coral">
+            <Link href="/shop" className="md:hidden text-[#1E2530] hover:text-[#E88C7D]">
               <Search className="w-5 h-5" />
             </Link>
 
             {/* Wishlist */}
-            <Link href={user ? "/dashboard/wishlist" : "/wishlist"} className="relative text-brand-navy hover:text-brand-coral transition-colors">
+            <Link href={user ? "/dashboard/wishlist" : "/wishlist"} className="relative text-[#1E2530] hover:text-[#E88C7D] transition-colors">
               <Heart className="w-5 h-5" />
               {wishlist.length > 0 && (
-                <span className="absolute -top-1.5 -right-1.5 bg-brand-coral text-white text-[10px] w-4.5 h-4.5 rounded-full flex items-center justify-center font-bold">
+                <span className="absolute -top-1.5 -right-1.5 bg-[#E88C7D] text-[#FAF6F0] text-[10px] w-4.5 h-4.5 rounded-full flex items-center justify-center font-bold">
                   {wishlist.length}
                 </span>
               )}
             </Link>
 
             {/* Cart */}
-            <Link href="/cart" className="relative text-brand-navy hover:text-brand-coral transition-colors">
+            <Link href="/cart" className="relative text-[#1E2530] hover:text-[#E88C7D] transition-colors">
               <ShoppingBag className="w-5 h-5" />
               {cart.length > 0 && (
-                <span className="absolute -top-1.5 -right-1.5 bg-brand-navy text-white text-[10px] w-4.5 h-4.5 rounded-full flex items-center justify-center font-bold">
+                <span className="absolute -top-1.5 -right-1.5 bg-[#1E2530] text-[#FAF6F0] text-[10px] w-4.5 h-4.5 rounded-full flex items-center justify-center font-bold">
                   {cart.length}
                 </span>
               )}
@@ -132,7 +132,7 @@ export const Header: React.FC = () => {
               <div className="flex items-center gap-2">
                 <Link
                   href={user.role === 'admin' ? '/admin' : '/dashboard'}
-                  className="flex items-center gap-1.5 text-sm font-semibold bg-brand-pink border border-brand-coral/20 px-3 py-1.5 rounded-full text-brand-navy hover:bg-brand-coral hover:text-white transition-all duration-300"
+                  className="flex items-center gap-1.5 text-sm font-bold bg-[#E88C7D] hover:bg-[#D77A6C] px-4 py-2 rounded-full text-[#FAF6F0] transition-all duration-300"
                 >
                   {user.role === 'admin' ? (
                     <>
@@ -150,7 +150,7 @@ export const Header: React.FC = () => {
             ) : (
               <Link
                 href="/login"
-                className="text-brand-navy hover:text-brand-coral transition-colors"
+                className="text-[#1E2530] hover:text-[#E88C7D] transition-colors"
                 title="Login"
               >
                 <UserIcon className="w-5 h-5" />
