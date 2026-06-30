@@ -235,10 +235,10 @@ export default function UserDashboard() {
             </div>
 
             {/* Sidebar Tabs */}
-            <nav className="bg-white rounded-3xl border border-gray-100 overflow-hidden shadow-xs divide-y divide-gray-50 text-sm font-semibold">
+            <nav className="bg-white rounded-3xl border border-gray-100 overflow-hidden shadow-xs flex flex-row lg:flex-col overflow-x-auto whitespace-nowrap lg:overflow-visible lg:whitespace-normal divide-x lg:divide-x-0 lg:divide-y divide-gray-50 text-sm font-semibold">
               <button
                 onClick={() => setActiveTab('overview')}
-                className={`w-full px-5 py-4 flex items-center gap-3.5 transition-colors ${
+                className={`flex-1 lg:w-full px-5 py-4 flex items-center justify-center lg:justify-start gap-2.5 transition-colors ${
                   activeTab === 'overview' ? 'bg-brand-pink/50 text-brand-coral' : 'text-brand-navy hover:bg-gray-50'
                 }`}
               >
@@ -247,7 +247,7 @@ export default function UserDashboard() {
               </button>
               <button
                 onClick={() => setActiveTab('orders')}
-                className={`w-full px-5 py-4 flex items-center gap-3.5 transition-colors ${
+                className={`flex-1 lg:w-full px-5 py-4 flex items-center justify-center lg:justify-start gap-2.5 transition-colors ${
                   activeTab === 'orders' ? 'bg-brand-pink/50 text-brand-coral' : 'text-brand-navy hover:bg-gray-50'
                 }`}
               >
@@ -256,7 +256,7 @@ export default function UserDashboard() {
               </button>
               <button
                 onClick={() => setActiveTab('wishlist')}
-                className={`w-full px-5 py-4 flex items-center gap-3.5 transition-colors ${
+                className={`flex-1 lg:w-full px-5 py-4 flex items-center justify-center lg:justify-start gap-2.5 transition-colors ${
                   activeTab === 'wishlist' ? 'bg-brand-pink/50 text-brand-coral' : 'text-brand-navy hover:bg-gray-50'
                 }`}
               >
@@ -265,7 +265,7 @@ export default function UserDashboard() {
               </button>
               <button
                 onClick={() => setActiveTab('addresses')}
-                className={`w-full px-5 py-4 flex items-center gap-3.5 transition-colors ${
+                className={`flex-1 lg:w-full px-5 py-4 flex items-center justify-center lg:justify-start gap-2.5 transition-colors ${
                   activeTab === 'addresses' ? 'bg-brand-pink/50 text-brand-coral' : 'text-brand-navy hover:bg-gray-50'
                 }`}
               >
@@ -274,7 +274,7 @@ export default function UserDashboard() {
               </button>
               <button
                 onClick={() => setActiveTab('settings')}
-                className={`w-full px-5 py-4 flex items-center gap-3.5 transition-colors ${
+                className={`flex-1 lg:w-full px-5 py-4 flex items-center justify-center lg:justify-start gap-2.5 transition-colors ${
                   activeTab === 'settings' ? 'bg-brand-pink/50 text-brand-coral' : 'text-brand-navy hover:bg-gray-50'
                 }`}
               >
@@ -283,7 +283,7 @@ export default function UserDashboard() {
               </button>
               <button
                 onClick={logout}
-                className="w-full px-5 py-4 flex items-center gap-3.5 text-rose-500 hover:bg-rose-50/50 transition-colors"
+                className="flex-1 lg:w-full px-5 py-4 flex items-center justify-center lg:justify-start gap-2.5 text-rose-500 hover:bg-rose-50/50 transition-colors"
               >
                 <LogOut className="w-4.5 h-4.5" />
                 <span>Logout Session</span>
