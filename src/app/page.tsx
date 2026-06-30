@@ -372,7 +372,7 @@ export default function HomePage() {
               </div>
               <div className="space-y-2">
                 <h3 className="font-playfair text-xl font-bold text-white">Fast Delivery</h3>
-                <p className="text-sm text-slate-400 font-light leading-relaxed">
+                <p className="text-sm text-slate-300 font-light leading-relaxed">
                   Free delivery on orders over ৳3000 nationwide with careful premium packaging.
                 </p>
               </div>
@@ -385,7 +385,7 @@ export default function HomePage() {
               </div>
               <div className="space-y-2">
                 <h3 className="font-playfair text-xl font-bold text-white">Easy Returns</h3>
-                <p className="text-sm text-slate-400 font-light leading-relaxed">
+                <p className="text-sm text-slate-300 font-light leading-relaxed">
                   Not the perfect fit? Return within 7 days for exchange or refund, no questions asked.
                 </p>
               </div>
@@ -398,7 +398,7 @@ export default function HomePage() {
               </div>
               <div className="space-y-2">
                 <h3 className="font-playfair text-xl font-bold text-white">Secure Payment</h3>
-                <p className="text-sm text-slate-400 font-light leading-relaxed">
+                <p className="text-sm text-slate-300 font-light leading-relaxed">
                   Multiple secure payment gateways ready or Cash on Delivery for absolute peace of mind.
                 </p>
               </div>
@@ -434,7 +434,7 @@ export default function HomePage() {
                 </p>
                 <div className="pt-2">
                   <h4 className="font-bold text-white text-sm">{rev.name}</h4>
-                  <span className="text-xs text-purple-405 font-bold">{rev.role}</span>
+                  <span className="text-xs text-purple-300 font-bold">{rev.role}</span>
                 </div>
               </div>
             ))}
