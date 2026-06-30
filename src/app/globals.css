@@ -10,6 +10,12 @@
   --brand-gold: #D4AF37;
   --brand-gold-soft: #C5A059;
   --brand-slate: #2C3E50;
+  
+  /* Backward Compatibility Variables for Legacy Pages */
+  --brand-coral: #4A148C;
+  --brand-coral-hover: #5C2C7A;
+  --brand-navy: #2C3E50;
+  --brand-pink: #FAF9F5;
 }
 
 @theme inline {
@@ -22,6 +28,12 @@
   --color-brand-slate: #2C3E50;
   --font-sans: 'Montserrat', sans-serif;
   --font-serif: 'Playfair Display', serif;
+  
+  /* Map legacy theme colors directly to new theme colors */
+  --color-brand-coral: var(--brand-coral);
+  --color-brand-coral-hover: var(--brand-coral-hover);
+  --color-brand-navy: var(--brand-navy);
+  --color-brand-pink: var(--brand-pink);
 }
 
 @layer base {
